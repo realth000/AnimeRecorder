@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>ui_component/TimelineItem.qml</file>
     </qresource>
 </RCC>
