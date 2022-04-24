@@ -1,11 +1,12 @@
 import QtQuick 2.15
 
 Rectangle {
-    property int itemWidth: 30
-    property int itemHeight: itemWidth
+    width: 30
+    height: width
     id: timelineItem
 //    color: "transparent"
     color: "#ff0000"
+    border.color: "#00ff00"
     MouseArea {
         hoverEnabled: true
         anchors.fill: parent

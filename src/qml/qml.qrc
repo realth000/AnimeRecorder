@@ -2,5 +2,8 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>ui_component/TimelineItem.qml</file>
+        <file>ui_component/TimelineLine.qml</file>
+        <file>ui_component/TimelineTableHeader.qml</file>
+        <file>ui_component/TimelineTable.qml</file>
     </qresource>
 </RCC>
