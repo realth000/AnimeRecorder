@@ -6,5 +6,7 @@
         <file>ui_component/TimelineTableHeader.qml</file>
         <file>ui_component/TimelineTable.qml</file>
         <file>ui_component/TimelineTableHeaderItem.qml</file>
+        <file>ui_component/TabBar.qml</file>
+        <file>ui_component/TabBarButton.qml</file>
     </qresource>
 </RCC>
