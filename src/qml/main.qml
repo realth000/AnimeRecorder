@@ -8,6 +8,7 @@ Window {
     visible: true
     title: qsTr("Hello World")
     TimelineTable {
-        anchors.centerIn: parent
+        width: parent.width
+        height: parent.height
     }
 }
