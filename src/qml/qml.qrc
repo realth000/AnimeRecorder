@@ -8,5 +8,6 @@
         <file>ui_component/TimelineTableHeaderItem.qml</file>
         <file>ui_component/TabBar.qml</file>
         <file>ui_component/TabBarButton.qml</file>
+        <file>TimelinePage.qml</file>
     </qresource>
 </RCC>
