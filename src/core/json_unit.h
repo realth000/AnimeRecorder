@@ -1,6 +1,9 @@
 #ifndef JSONUNIT_H
 #define JSONUNIT_H
 
+#include <QtCore/QString>
+#include <QtCore/QList>
+#include <QtCore/QJsonObject>
 /*
 {
     name: "Animation name",
@@ -45,12 +48,74 @@
     }
 }
 */
+QT_BEGIN_NAMESPACE
+namespace AniJson {
+struct Info;
+struct WatchState;
+struct DownloadState;
+struct EpisodeState;
+struct State;
+struct Json;
+typedef QList<Json> JsonList;
+class JsonUnit;
+};
 
+QT_END_NAMESPACE
 
-class JsonUnit
+struct AniJson::Info {
+    QString nameChs;
+    QString nameCht;
+    QString nameJp;
+    QString nameRm;
+    int season;
+    int episodeCount;
+    QString type;
+    QString storyType;
+    int year;
+    int month;
+};
+
+struct AniJson::WatchState {
+    int watchEpisodeCount;
+    QString watchEpisodes;
+};
+
+struct AniJson::DownloadState {
+    int downloadEpisodeCount;
+    QString downloadSource;
+    QString downloadPath;
+    bool downloadOped;
+    bool downloadCd;
+};
+
+struct AniJson::EpisodeState {
+    int episode;
+    bool watched;
+    QString watchTime;
+    QString watchSource;
+    bool download;
+};
+
+struct AniJson::State {
+    WatchState watchState;
+    DownloadState downloadState;
+    QList<EpisodeState> episodeStates;
+};
+
+struct AniJson::Json {
+    QString name;
+    int episodeCount;
+    QString description;
+    Info info;
+    State state;
+};
+
+class AniJson::JsonUnit
 {
 public:
     JsonUnit();
+    static QJsonObject getJsonObject(const QString &s);
+    AniJson::JsonList readJsonFile(const QString &filePath);
 };
 
 #endif // JSONUNIT_H

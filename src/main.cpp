@@ -1,9 +1,13 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
+// test
+#include "core/json_unit.h"
 
 int main(int argc, char *argv[])
 {
+    AniJson::JsonUnit t;
+    t.readJsonFile("/home/th000/Desktop/QtProjects/AnimeRecorder/test.json");
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
